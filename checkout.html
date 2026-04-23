@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Finalizar Compra – Mini Brands Oficial</title>
+  <link rel="shortcut icon" href="cdn/shop/files/Design_sem_nome_13_96x968c6f.png?v=1776452207" type="image/png">
+  <link rel="stylesheet" href="cdn/shop/t/2/assets/theme18e6.css?v=182732418468018288351775797239">
+  <style>
+    @font-face {
+      font-family: Poppins;
+      font-weight: 400;
+      font-style: normal;
+      font-display: fallback;
+      src: url("cdn/fonts/poppins/poppins_n4.0ba78fa5af9b0e1a374041b3ceaadf0a43b41362.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: Poppins;
+      font-weight: 600;
+      font-style: normal;
+      font-display: fallback;
+      src: url("cdn/fonts/poppins/poppins_n6.aa29d4918bc243723d56b59572e18228ed0786f6.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: Poppins;
+      font-weight: 700;
+      font-style: normal;
+      font-display: fallback;
+      src: url("cdn/fonts/poppins/poppins_n7.56758dcf284489feb014a026f3727f2f20a54626.woff2") format("woff2");
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Poppins, sans-serif;
+      background: #f8f8f8;
+      color: #111;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    .co-header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .co-header img { max-height: 48px; }
+
+    /* ── Layout ── */
+    .co-wrap {
+      max-width: 960px;
+      margin: 32px auto;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 24px;
+    }
+    @media (max-width: 700px) {
+      .co-wrap { grid-template-columns: 1fr; }
+      .co-summary { order: -1; }
+    }
+
+    /* ── Card ── */
+    .co-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .co-card h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    /* ── Form ── */
+    .co-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 16px;
+    }
+    .co-form-grid .full { grid-column: 1 / -1; }
+    .co-field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .co-field input {
+      width: 100%;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 14px;
+      font-family: inherit;
+      color: #111;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .co-field input:focus { border-color: #a376ff; }
+    .co-field input.error { border-color: #e53; }
+    .co-field-row { display: flex; gap: 8px; }
+    .co-field-row .co-field { flex: 1; }
+    .co-field-row .co-field.narrow { flex: 0 0 90px; }
+
+    /* ── Summary ── */
+    .co-summary-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .co-summary-item:last-of-type { border-bottom: none; }
+    .co-summary-img {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #f5f5f5;
+      flex-shrink: 0;
+    }
+    .co-summary-name { font-size: 13px; font-weight: 600; flex: 1; }
+    .co-summary-qty { font-size: 12px; color: #888; }
+    .co-summary-price { font-size: 14px; font-weight: 700; }
+    .co-total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 2px solid #eee;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    /* ── PIX button ── */
+    #co-pay-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: #a376ff;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background .2s;
+    }
+    #co-pay-btn:hover { background: #8b5cf6; }
+    #co-pay-btn:disabled { background: #c4b5fd; cursor: not-allowed; }
+    #co-pay-btn .spinner {
+      width: 18px; height: 18px;
+      border: 3px solid rgba(255,255,255,.4);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      display: none;
+    }
+    #co-pay-btn.loading .spinner { display: block; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── PIX Modal ── */
+    #co-pix-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.6);
+      z-index: 99999;
+      justify-content: center;
+      align-items: center;
+    }
+    #co-pix-modal.active { display: flex; }
+    #co-pix-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 36px 28px;
+      max-width: 420px;
+      width: 92%;
+      text-align: center;
+    }
+    #co-pix-box h2 { font-size: 20px; margin-bottom: 6px; }
+    #co-pix-box .co-pix-sub { font-size: 13px; color: #666; margin-bottom: 20px; }
+    #co-pix-qr { width: 200px; height: 200px; display: block; margin: 0 auto 20px; border-radius: 8px; }
+    #co-pix-code {
+      font-size: 11px; color: #777; word-break: break-all;
+      background: #f5f5f5; border-radius: 6px; padding: 10px;
+      margin-bottom: 16px; cursor: pointer;
+    }
+    #co-pix-copy-btn {
+      display: block; width: 100%;
+      background: #00b578; color: #fff;
+      border: none; border-radius: 8px;
+      padding: 12px; font-size: 15px; font-family: inherit;
+      cursor: pointer; margin-bottom: 10px;
+    }
+    #co-pix-copy-btn:hover { background: #009e6a; }
+    #co-pix-close {
+      background: none; border: none; color: #999;
+      font-size: 13px; cursor: pointer; text-decoration: underline; font-family: inherit;
+    }
+    .co-error-msg {
+      color: #c33; font-size: 13px; margin-top: 10px; display: none;
+    }
+    .co-secure-badge {
+      display: flex; align-items: center; justify-content: center;
+      gap: 6px; margin-top: 14px; font-size: 12px; color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<header class="co-header">
+  <a href="index.html">
+    <img src="cdn/shop/files/Logo_vibrante_do_Mini_Brands_130x%402xf942.png?v=1775797664" alt="Mini Brands Oficial">
+  </a>
+</header>
+
+<div class="co-wrap">
+
+  <!-- ── Formulário ── -->
+  <section class="co-card">
+    <h2>Informações de entrega</h2>
+    <form id="co-form" novalidate>
+      <div class="co-form-grid">
+
+        <div class="co-field full">
+          <label for="co-name">Nome completo *</label>
+          <input type="text" id="co-name" name="name" autocomplete="name" required placeholder="João da Silva">
+        </div>
+
+        <div class="co-field">
+          <label for="co-cpf">CPF *</label>
+          <input type="text" id="co-cpf" name="cpf" inputmode="numeric" maxlength="14" required placeholder="000.000.000-00">
+        </div>
+
+        <div class="co-field">
+          <label for="co-phone">Telefone / WhatsApp *</label>
+          <input type="text" id="co-phone" name="phone" inputmode="numeric" maxlength="15" required placeholder="(11) 99999-9999">
+        </div>
+
+        <div class="co-field full">
+          <label for="co-email">E-mail *</label>
+          <input type="email" id="co-email" name="email" autocomplete="email" required placeholder="joao@email.com">
+        </div>
+
+        <div class="co-field">
+          <label for="co-cep">CEP *</label>
+          <input type="text" id="co-cep" name="cep" inputmode="numeric" maxlength="9" required placeholder="00000-000">
+        </div>
+
+        <div class="co-field">
+          <label for="co-state">Estado</label>
+          <input type="text" id="co-state" name="state" maxlength="2" placeholder="SP" readonly>
+        </div>
+
+        <div class="co-field full">
+          <label for="co-street">Rua / Avenida</label>
+          <input type="text" id="co-street" name="street" placeholder="Rua das Flores">
+        </div>
+
+        <div class="co-field narrow" style="flex:0 0 110px">
+          <label for="co-number">Número *</label>
+          <input type="text" id="co-number" name="number" required placeholder="123">
+        </div>
+
+        <div class="co-field">
+          <label for="co-complement">Complemento</label>
+          <input type="text" id="co-complement" name="complement" placeholder="Apto 4B">
+        </div>
+
+        <div class="co-field">
+          <label for="co-neighborhood">Bairro</label>
+          <input type="text" id="co-neighborhood" name="neighborhood" placeholder="Centro">
+        </div>
+
+        <div class="co-field">
+          <label for="co-city">Cidade</label>
+          <input type="text" id="co-city" name="city" placeholder="São Paulo" readonly>
+        </div>
+
+      </div><!-- /grid -->
+
+      <button type="submit" id="co-pay-btn">
+        <div class="spinner"></div>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        Pagar com PIX
+      </button>
+      <p class="co-error-msg" id="co-error"></p>
+      <div class="co-secure-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Pagamento 100% seguro via PIX
+      </div>
+    </form>
+  </section>
+
+  <!-- ── Resumo ── -->
+  <aside class="co-summary co-card">
+    <h2>Resumo do pedido</h2>
+    <div id="co-items"></div>
+    <div class="co-total-row">
+      <span>Total</span>
+      <span id="co-total">R$ 0,00</span>
+    </div>
+  </aside>
+
+</div><!-- /wrap -->
+
+<!-- ── Modal PIX ── -->
+<div id="co-pix-modal">
+  <div id="co-pix-box">
+    <h2>Pague com PIX</h2>
+    <p class="co-pix-sub">Escaneie o QR Code ou copie o código abaixo</p>
+    <img id="co-pix-qr" src="" alt="QR Code PIX">
+    <div id="co-pix-code"></div>
+    <button id="co-pix-copy-btn">Copiar código PIX</button>
+    <button id="co-pix-close">Fechar</button>
+  </div>
+</div>
+
+<script>
+// ── Cart (inline, same logic as redirect.js) ──────────────────────────────
+var AnubisCart = (function () {
+  var KEY = 'anubis_cart';
+  function getCart() { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch(e) { return []; } }
+  function getTotal() { return getCart().reduce(function(s,i){ return s + i.price * i.quantity; }, 0); }
+  function clearCart() { localStorage.removeItem(KEY); }
+  return { getCart: getCart, getTotal: getTotal, clearCart: clearCart };
+})();
+
+function formatBRL(cents) {
+  return 'R$ ' + (cents / 100).toFixed(2).replace('.', ',');
+}
+
+// ── Render order summary ──────────────────────────────────────────────────
+(function renderSummary() {
+  var items = AnubisCart.getCart();
+  var container = document.getElementById('co-items');
+  if (!items.length) {
+    container.innerHTML = '<p style="color:#888;font-size:14px;">Carrinho vazio. <a href="cart.html">Voltar ao carrinho</a></p>';
+    document.getElementById('co-pay-btn').disabled = true;
+    return;
+  }
+  container.innerHTML = items.map(function(item) {
+    var img = item.image
+      ? '<img class="co-summary-img" src="' + item.image + '" alt="">'
+      : '<div class="co-summary-img"></div>';
+    return '<div class="co-summary-item">' + img +
+      '<div style="flex:1"><div class="co-summary-name">' + item.name + '</div>' +
+      '<div class="co-summary-qty">Qtd: ' + item.quantity + '</div></div>' +
+      '<div class="co-summary-price">' + formatBRL(item.price * item.quantity) + '</div>' +
+      '</div>';
+  }).join('');
+  document.getElementById('co-total').textContent = formatBRL(AnubisCart.getTotal());
+})();
+
+// ── CEP auto-fill ─────────────────────────────────────────────────────────
+var cepInput = document.getElementById('co-cep');
+cepInput.addEventListener('input', function() {
+  var raw = this.value.replace(/\D/g, '');
+  if (raw.length > 5) raw = raw.slice(0,5) + '-' + raw.slice(5,8);
+  this.value = raw;
+  if (raw.replace('-','').length === 8) fetchCep(raw.replace('-',''));
+});
+
+function fetchCep(cep) {
+  fetch('https://viacep.com.br/ws/' + cep + '/json/')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      if (d.erro) return;
+      document.getElementById('co-street').value      = d.logradouro || '';
+      document.getElementById('co-neighborhood').value = d.bairro    || '';
+      document.getElementById('co-city').value         = d.localidade || '';
+      document.getElementById('co-state').value        = d.uf        || '';
+    })
+    .catch(function() {});
+}
+
+// ── CPF mask ──────────────────────────────────────────────────────────────
+document.getElementById('co-cpf').addEventListener('input', function() {
+  var v = this.value.replace(/\D/g, '').slice(0,11);
+  if (v.length > 9) v = v.slice(0,3)+'.'+v.slice(3,6)+'.'+v.slice(6,9)+'-'+v.slice(9);
+  else if (v.length > 6) v = v.slice(0,3)+'.'+v.slice(3,6)+'.'+v.slice(6);
+  else if (v.length > 3) v = v.slice(0,3)+'.'+v.slice(3);
+  this.value = v;
+});
+
+// ── Phone mask ────────────────────────────────────────────────────────────
+document.getElementById('co-phone').addEventListener('input', function() {
+  var v = this.value.replace(/\D/g, '').slice(0,11);
+  if (v.length > 6) v = '('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7);
+  else if (v.length > 2) v = '('+v.slice(0,2)+') '+v.slice(2);
+  this.value = v;
+});
+
+// ── Form submit ───────────────────────────────────────────────────────────
+document.getElementById('co-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  var required = ['co-name','co-cpf','co-phone','co-email','co-cep','co-number'];
+  var valid = true;
+  required.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el.value.trim()) { el.classList.add('error'); valid = false; }
+    else el.classList.remove('error');
+  });
+
+  if (!valid) {
+    showError('Por favor, preencha todos os campos obrigatórios.');
+    return;
+  }
+
+  var amount = AnubisCart.getTotal();
+  if (!amount || amount <= 0) {
+    showError('Carrinho vazio. Volte e adicione produtos.');
+    return;
+  }
+
+  setLoading(true);
+  hideError();
+
+  try {
+    var response = await fetch('/.netlify/functions/create-pix', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        amount: amount,
+        customer: {
+          name:  document.getElementById('co-name').value.trim(),
+          cpf:   document.getElementById('co-cpf').value.trim(),
+          email: document.getElementById('co-email').value.trim(),
+          phone: document.getElementById('co-phone').value.trim(),
+        },
+      }),
+    });
+
+    var data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || 'Erro ao criar transação PIX');
+    }
+
+    setLoading(false);
+    showPixModal(data);
+    AnubisCart.clearCart();
+
+  } catch (err) {
+    setLoading(false);
+    showError('Erro: ' + (err.message || 'Tente novamente.'));
+  }
+});
+
+function setLoading(on) {
+  var btn = document.getElementById('co-pay-btn');
+  btn.disabled = on;
+  if (on) btn.classList.add('loading'); else btn.classList.remove('loading');
+}
+
+function showError(msg) {
+  var el = document.getElementById('co-error');
+  el.textContent = msg;
+  el.style.display = 'block';
+}
+
+function hideError() {
+  document.getElementById('co-error').style.display = 'none';
+}
+
+// ── PIX Modal ─────────────────────────────────────────────────────────────
+function showPixModal(pixData) {
+  var qrCodeText = pixData.qrCodeText || pixData.pixCode || (pixData.pix && pixData.pix.qrCodeText) || '';
+  var qrCodeImg  = pixData.qrCode    || pixData.qrCodeBase64 || (pixData.pix && pixData.pix.qrCode) || '';
+
+  var qrEl   = document.getElementById('co-pix-qr');
+  var codeEl = document.getElementById('co-pix-code');
+
+  if (qrCodeImg) {
+    qrEl.src = qrCodeImg.startsWith('data:') ? qrCodeImg : 'data:image/png;base64,' + qrCodeImg;
+    qrEl.style.display = 'block';
+  } else {
+    qrEl.style.display = 'none';
+  }
+
+  codeEl.textContent = qrCodeText;
+  codeEl.onclick = function() { copyPix(qrCodeText); };
+  document.getElementById('co-pix-copy-btn').onclick = function() { copyPix(qrCodeText); };
+
+  document.getElementById('co-pix-modal').classList.add('active');
+}
+
+function copyPix(text) {
+  if (!text) return;
+  navigator.clipboard.writeText(text).then(function() {
+    var btn = document.getElementById('co-pix-copy-btn');
+    btn.textContent = 'Copiado!';
+    setTimeout(function() { btn.textContent = 'Copiar código PIX'; }, 2000);
+  });
+}
+
+document.getElementById('co-pix-close').addEventListener('click', function() {
+  document.getElementById('co-pix-modal').classList.remove('active');
+  window.location.href = 'index.html';
+});
+
+document.getElementById('co-pix-modal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    this.classList.remove('active');
+    window.location.href = 'index.html';
+  }
+});
+</script>
+</body>
+</html>
