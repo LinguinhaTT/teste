@@ -1,0 +1,43 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 22 Apr 2026 21:03:16 at https://www.minibrandsoficial.space/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "pt_BR, en, *" https://www.minibrandsoficial.space/ -O1 "C:\Users\User\Desktop\123\minigeladeira" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+21:04:48	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/POST (from https://www.minibrandsoficial.space/)
+21:04:48	Error: 	"Error when decompressing" (-1) at link https://www.minibrandsoficial.space/cdn (from https://www.minibrandsoficial.space/)
+21:06:38	Warning: 	file not stored in cache due to bogus state (incomplete type with OK (200), size 0): https://areviewsapp.com/js_codes/areviews_main_jscodes.js
+21:10:24	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/window.location.href (from https://www.minibrandsoficial.space/)
+21:10:24	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/signals/config/ (from https://connect.facebook.net/en_US/fbevents.js)
+21:10:24	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/t (from https://connect.facebook.net/en_US/fbevents.js)
+21:10:24	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/e (from https://connect.facebook.net/en_US/fbevents.js)
+21:10:24	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/signals/plugins/ (from https://connect.facebook.net/en_US/fbevents.js)
+21:10:24	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/schema.org/ (from https://connect.facebook.net/en_US/fbevents.js)
+21:10:24	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/t.resolvedLink (from https://connect.facebook.net/en_US/fbevents.js)
+21:10:24	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/o (from https://connect.facebook.net/en_US/fbevents.js)
+21:10:24	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/signals/iwl.js (from https://connect.facebook.net/en_US/fbevents.js)
+21:10:24	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/signals/iwl.js?pixel_id= (from https://connect.facebook.net/en_US/fbevents.js)
+21:10:24	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/n.dl (from https://connect.facebook.net/en_US/fbevents.js)
+21:10:24	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/n.rl (from https://connect.facebook.net/en_US/fbevents.js)
+21:10:55	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/collections/POST (from https://www.minibrandsoficial.space/collections/all)
+21:12:18	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/collections/window.location.href (from https://www.minibrandsoficial.space/collections/all)
+21:12:18	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/pages/POST (from https://www.minibrandsoficial.space/pages/contact)
+21:12:18	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/pages/window.location.href (from https://www.minibrandsoficial.space/pages/contact)
+21:12:19	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/collections/frontpage/products/POST (from https://www.minibrandsoficial.space/collections/frontpage/products/geladeira-retro-surpresa-meu-mini-mercado)
+21:12:19	Error: 	"Forbidden" (403) at link https://kit.fontawesome.com/07437d5a26.js (from https://www.minibrandsoficial.space/collections/frontpage/products/geladeira-retro-surpresa-meu-mini-mercado)
+21:12:20	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/collections/frontpage/products/window.location.href (from https://www.minibrandsoficial.space/collections/frontpage/products/geladeira-retro-surpresa-meu-mini-mercado)
+21:12:22	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/collections/combo-capsulas-surpresa/products/POST (from https://www.minibrandsoficial.space/collections/combo-capsulas-surpresa/products/kit-minis-geladeira-3-capsulas-conjunto-fill-the-fridge)
+21:12:23	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/collections/combo-capsulas-surpresa/products/window.location.href (from https://www.minibrandsoficial.space/collections/combo-capsulas-surpresa/products/kit-minis-geladeira-3-capsulas-conjunto-fill-the-fridge)
+21:12:23	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/collections/caixas-mini-brands/products/POST (from https://www.minibrandsoficial.space/collections/caixas-mini-brands/products/caixa-mini-brands-retro-4-itens-raros-exclusivos)
+21:12:23	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/collections/caixas-mini-brands/products/window.location.href (from https://www.minibrandsoficial.space/collections/caixas-mini-brands/products/caixa-mini-brands-retro-4-itens-raros-exclusivos)
+21:12:25	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/collections/mini-brands-colecoes/products/POST (from https://www.minibrandsoficial.space/collections/mini-brands-colecoes/products/mini-brands-retro-capsula-unidade)
+21:12:25	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/collections/mini-brands-colecoes/products/window.location.href (from https://www.minibrandsoficial.space/collections/mini-brands-colecoes/products/mini-brands-retro-capsula-unidade)
+21:13:01	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/collections/mini-cozinha-magica/products/POST (from https://www.minibrandsoficial.space/collections/mini-cozinha-magica/products/mini-torradeira-magic-cook-kitchen-zuru)
+21:13:01	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/collections/mini-cozinha-magica/products/window.location.href (from https://www.minibrandsoficial.space/collections/mini-cozinha-magica/products/mini-torradeira-magic-cook-kitchen-zuru)
+21:14:41	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/products/POST (from https://www.minibrandsoficial.space/products/mini-brands-home-capsula-unidade)
+21:14:41	Error: 	"Not Found" (404) at link https://www.minibrandsoficial.space/products/window.location.href (from https://www.minibrandsoficial.space/products/mini-brands-home-capsula-unidade)
+
+HTTrack Website Copier/3.49-2 mirror complete in 11 minutes 25 seconds : 399 links scanned, 367 files written (79880930 bytes overall) [57140439 bytes received at 83416 bytes/sec], 33107610 bytes transferred using HTTP compression in 153 files, ratio 18%, 9.4 requests per connection
+(31 errors, 1 warnings, 0 messages)

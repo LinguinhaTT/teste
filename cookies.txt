@@ -1,0 +1,13 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.minibrandsoficial.space	TRUE	/	FALSE	1999999999	_shopify_analytics	:AZ23pe1IAAEAbfcgldo_sezRZbWuCq3CIi7FEtwR2ziwfyjiCvMji1950XbRFbtePLwmlLIC0gA6INowSczm7BnLz905WyJou_fUkCE:
+www.minibrandsoficial.space	TRUE	/	FALSE	1999999999	_shopify_marketing	:AZ23pe1IAAEArh1nfzfw9dtcIvhjz6yn-5Tvi6OH5CvlsZ8B_Q9qoslLJqPepVgvvxrRhwYkyLwe9b6YfLTxCKJfAmE:
+www.mercadopago.com	TRUE	/	FALSE	1999999999	_d2id	86001549-c661-4bfd-b657-4919771923c3-n
+.mercadopago.com	TRUE	/	FALSE	1999999999	SameSite	None
+www.minibrandsoficial.space	TRUE	/	FALSE	1999999999	_shopify_essential	:AZ23pe0PAAEAH1vqWjoBZi0F-KWhSbXxX9I7LnkssIs4Ar95f8GARUICF9NBuZOd0Eim1s3nzTdi0LabcRhpzbzfOBYKrulT5Zo4GICAPm-kRJ19zIp297ti4VG2Rrc2guFUyVGKfQmdkyLCgX3ONZQ0eCb7k3YCy9Pgs7s8GvF94teb3sNZxPKeZvbR0nnvzSU7dImpmTGdB-UquLLoBzUBCt_XZRR_O-lWUln9o76gNn2v7C-k6Tqob4rrZ7wamRuy5McB6JzPwJFRN1IIi_1XVM-tKShVc0LKuuushems9JkZR2zvwk1Rm7NMKc1l7m38pJTBCkbMKUhrM1_qEVvjDceMeWLfyElUc5Zsl-cKH_Dsdzi4dYLnXxJXHZCy-LxmK7NzQiz2GTKxADH-MfX3HeA0lgOm1lxJ5C2UKw:
+www.minibrandsoficial.space	TRUE	/	FALSE	1999999999	Priority	High
+www.minibrandsoficial.space	TRUE	/	FALSE	1999999999	localization	BR
+minibrandsoficial.space	TRUE	/	FALSE	1999999999	_shopify_y	6c3c8460-bae0-4b2b-954c-632d4d643b63
+minibrandsoficial.space	TRUE	/	FALSE	1999999999	_shopify_s	cc2510f2-0a21-4784-9914-377bdf993c79
+www.minibrandsoficial.space	TRUE	/	FALSE	1999999999	SameSite	Lax
+
